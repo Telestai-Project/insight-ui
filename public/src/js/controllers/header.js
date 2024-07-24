@@ -6,8 +6,8 @@ angular.module('insight.system').controller('HeaderController',
 
     $rootScope.currency = {
       factor: 1,
-      symbol: 'RVN',
-      realSymbol: 'RVN'
+      symbol: 'TLS',
+      realSymbol: 'TLS'
     };
 
     $scope.menu = [{
@@ -17,7 +17,7 @@ angular.module('insight.system').controller('HeaderController',
 	  'title': 'Statistics',
       'link': 'stats'
 	}, {
-	  'title': 'Rich List',
+	  'title': 'Rich list',
       'link': 'rich-list'
 	}, {
 	  'title': 'Pools',

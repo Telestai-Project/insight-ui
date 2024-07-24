@@ -4,7 +4,7 @@ angular.module('insight')
 .constant('Constants', {
 
 	CURRENCY: {
-		RVN : 'RVN',
+		TLS : 'TLS',
 		USD : 'USD',
 		BTC : 'BTC'
 	},
@@ -14,7 +14,7 @@ angular.module('insight')
 	CHART_DAYS: 14,
     NETWORK: window.current_network ? window.current_network : 'livenet',
     DEFAULT_LANGUAGE: localStorage.getItem('insight-language') || 'en',
-    DEFAULT_CURRENCY: localStorage.getItem('insight-currency') || 'RVN'
+    DEFAULT_CURRENCY: localStorage.getItem('insight-currency') || 'TLS'
 
 });
 //Setting up route
@@ -22,7 +22,7 @@ angular.module('insight').config(function($routeProvider) {
   $routeProvider.
     when('/block/:blockHash', {
       templateUrl: 'views/block.html',
-      title: 'Ravencoin Block '
+      title: 'Telestai Block '
     }).
     when('/block-index/:blockHeight', {
       controller: 'BlocksController',
@@ -34,7 +34,7 @@ angular.module('insight').config(function($routeProvider) {
     }).
     when('/tx/:txId/:v_type?/:v_index?', {
       templateUrl: 'views/transaction.html',
-      title: 'Ravencoin Transaction '
+      title: 'Telestai transaction '
     }).
     when('/', {
       templateUrl: 'views/index.html',
@@ -42,15 +42,15 @@ angular.module('insight').config(function($routeProvider) {
     }).
     when('/blocks', {
       templateUrl: 'views/block_list.html',
-      title: 'Ravencoin Blocks solved Today'
+      title: 'Telestai blocks mined'
     }).
     when('/blocks-date/:blockDate/:startTimestamp?', {
       templateUrl: 'views/block_list.html',
-      title: 'Ravencoin Blocks solved '
+      title: 'Telestai blocks mined'
     }).
     when('/address/:addrStr', {
       templateUrl: 'views/address.html',
-      title: 'Ravencoin Address '
+      title: 'Telestai address '
     }).
 	 when('/charts', {
       templateUrl: 'views/charts.html',
@@ -86,11 +86,11 @@ angular.module('insight').config(function($routeProvider) {
     when('/rich-list', {
         controller: 'RichListController',
         templateUrl: 'views/rich_list.html',
-        title: 'Rich List'
+        title: 'Telestai rich list'
 	}).
 	when('/messages/verify', {
       templateUrl: 'views/messages_verify.html',
-      title: 'Verify Message'
+      title: 'Verify message'
     })
     .otherwise({
       templateUrl: 'views/404.html',

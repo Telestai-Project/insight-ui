@@ -11,14 +11,14 @@ angular.module('insight.chart')
                 datasetOverride : [{
                     defaultFontFamily: 'Ubuntu,sans-serif',
                     yAxisID: 'y-axis-1' ,
-                    borderColor: '#012d88',
+                    borderColor: '#ffffff',
                     borderWidth: 1,
-                    pointBorderColor: '#012d88',
-                    pointBackgroundColor: '#012d88',
+                    pointBorderColor: '#ffffff',
+                    pointBackgroundColor: '#ffffff',
                     pointBorderWidth: 0,
                     pointRadius: 0,
-                    pointHoverBackgroundColor: '#012d88',
-                    pointHoverBorderColor: '#012d88',
+                    pointHoverBackgroundColor: '#ffffff',
+                    pointHoverBorderColor: '#ffffff',
                     pointHoverBorderWidth: 1,
                     pointHitRadius: 10,
                     pointStyle: 'rect',
@@ -26,7 +26,7 @@ angular.module('insight.chart')
                 }],
                 options : {
                     tooltips:{
-                        backgroundColor: '#012d88',
+                        backgroundColor: 'rgba(0,0,0,0.7)',
                         titleFontFamily: 'Ubuntu,sans-serif',
                         titleFontSize: 12,
                         titleFontStyle: '500',
@@ -52,13 +52,13 @@ angular.module('insight.chart')
                             display: true,
                             position: 'left',
                             gridLines: {
-                                color: '#4700cc',
+                                color: '#ffffff',
                                 drawBorder: false,
                                 offsetGridLines: true,
-                                zeroLineColor: '#4700cc'
+                                zeroLineColor: '#ffffff'
                             },
                             ticks: {
-                                fontColor:'#4700cc',
+                                fontColor:'#ffffff',
                                 fontFamily: 'Ubuntu,sans-serif',
                                 fontSize: 14,
                                 padding: 20
@@ -75,14 +75,14 @@ angular.module('insight.chart')
                                 max: Date.now()
                             },
                             gridLines: {
-                                color: '#4700cc',
+                                color: '#ffffff',
                                 drawBorder: false,
                                 drawOnChartArea: false,
                                 drawTicks: true,
-                                zeroLineColor: '#4700cc'
+                                zeroLineColor: '#ffffff'
                             },
                             ticks: {
-                                fontColor: '#4700cc',
+                                fontColor: '#ffffff',
                                 fontSize: 10,
                                 fontFamily: 'Ubuntu,sans-serif'
                             }
@@ -129,7 +129,7 @@ angular.module('insight.chart')
 
             gradient.addColorStop(0, 'rgba(1, 45, 136,0.9686274509803922)');
             gradient.addColorStop(1, 'rgba(0, 0, 0,0.001)');
-            chart.chart.config.data.datasets[0].backgroundColor = gradient;
+            // chart.chart.config.data.datasets[0].backgroundColor = gradient;
         };
 
         StatisticChart.prototype.load = function (factory, itemField, itemName, fill) {

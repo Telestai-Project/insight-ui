@@ -8,7 +8,7 @@ angular.module('insight.address').controller('AddressController',
         // Turn the balance obj into an array [{ name: IPHONE!, totalRecieved: 0, totalSpent: 0, balance: 1 }]
         var finalArray = [];
         for(var key in balanceObj) {
-            if (key !== 'RVN') {
+            if (key !== 'TLS') {
                 var name = key;
                 var totalReceived = balanceObj[key].totalReceived / 100000000;
                 var totalSpent = balanceObj[key].totalSpent / 100000000;
